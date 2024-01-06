@@ -71,7 +71,11 @@ cardData.forEach((data) => {
   const btnClose = userCard.querySelector(".btn-close");
 
   btnClose.addEventListener("click", () => {
-    userCard.remove();
+    userCard.classList.add("closing");
+
+    setTimeout(() => {
+      userCard.remove();
+    }, 300);
   });
 
   userContainer.appendChild(userCard);
